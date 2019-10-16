@@ -52,36 +52,47 @@ propriedades:
 os livros.
 */
 function book(bookTitle) {
-  var infoBook = {
-    "otherBookTitle": {
-      otherOtherBookTitle: {
-        "quantidadePaginas": 2,
-        "autor": "String",
-        "editora": "String"
-      }
+  var allBooks = {
+    "Livro 1": {
+      "quantidadePaginas": 1,
+      "autor": "Autora 1",
+      "editora": "Editora 1"
+    },
+    "Livro 2": {
+      "quantidadePaginas": 2,
+      "autor": "Autora 2",
+      "editora": "Editora 2"
+    },
+    "Livro 3": {
+      "quantidadePaginas": 3,
+      "autor": "Autora 3",
+      "editora": "Editora 3"
     }
   }
-  return
+  if (bookTitle) {
+    return allBooks[bookTitle[autor]];
+  }
+  return allBooks;
 }
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+console.log(book());
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
+console.log("O livro "+ bookTitle + " tem " + allBooks[bookTitle] + " páginas!")
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+console.log("O autor do livro "+ bookTitle + " é " + allBooks[bookTitle] + " páginas!")
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
